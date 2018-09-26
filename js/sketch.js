@@ -8,15 +8,15 @@ function setup() {
 function draw() {
   //background(120);
   //fill(255, 0, 0)
-  stroke(0, 255, 0)
+  stroke(110)
   strokeWeight(20)
   //ellipse(400, 500, 100, 100);
   ellipse(400, 500, mouseX, mouseY);
   if(mouseIsPressed) {
-     fill(0, 0, 255)
+     fill(110)
   }
   else {
-     fill(255, 0, 0)
+     fill(210)
   }
  }
 
