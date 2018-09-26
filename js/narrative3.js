@@ -16,8 +16,8 @@ var modem;
 var bach;
 
 function preload() {
-
-  createP("loading...");
+  // doesn't work:?
+  //createP("loading...");
 
   spaceBG = loadImage('./images/space.png');
   effect1 = loadImage('./images/effect1.png');
