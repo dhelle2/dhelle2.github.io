@@ -24,10 +24,10 @@ function startStory() {
     bach.stop();
     mozart.play();
     userName = createElement('h1', nameInput.value());
-    title = createElement('h1','Get home before the sun goes down')
-    firstOption = createA("#","walk towards the sun");
+    title = createElement('h1','This is mozart?!?!')
+    firstOption = createA("#","try to find bach again..");
     createElement('br');
-    secondOption = createA("#","go home");
+    secondOption = createA("#","quit");
 
     firstOption.mousePressed(toSun);
     secondOption.mousePressed(toHome);
@@ -38,8 +38,8 @@ function toSun() {
    walkToSun = true;
    userName.html(nameInput.value());
 
-   title.html("You walk towards the sun it gets bigger");
-   firstOption.html('walk closer');
+   title.html("Where is Bach?");
+   firstOption.html('keep looking...');
    secondOption.html("control the sun");
    firstOption.mousePressed(walkCloserToSun);
 
@@ -66,9 +66,9 @@ function walkCloserToSun() {
 
    userName.html(nameInput.value());
 
-   title.html("You are very close to the sun");
-   firstOption.html('Go home');
-   secondOption.html("fly away");
+   title.html("Bach :)");
+   firstOption.html('hope it works for you..');
+   secondOption.html("reload to get mozart..");
 
    //modem.play();
    bach.play(); //?
