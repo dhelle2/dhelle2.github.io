@@ -25,13 +25,13 @@ function walkCloserAnim() {
    if(sunSlider.value() > 200){
       title.html("faster?")
       //mozart.speed(sunSlider.value());
-      bach.rate(sunSlider.value());
+      bach.rate(3.0);
       bach.stop();
-      bach.start();
+      //bach.start();
    }
    else {
       //mozart.speed(1);
-      bach.rate(1);
+      //bach.rate(1.0);
    }
 
 }

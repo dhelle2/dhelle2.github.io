@@ -49,7 +49,10 @@ function toHome() {
     firstOption.hide();
     secondOption.hide();
 
-    title.html('you have gone home. good night');
+    bach.stop();
+    mozart.play();
+
+    title.html('mozart forever!! (or.. reload to get back to bach..)');
 }
 
 function walkCloserToSun() {
@@ -67,8 +70,8 @@ function walkCloserToSun() {
    userName.html(nameInput.value());
 
    title.html("Bach :)");
-   firstOption.html('hope it works for you..');
-   secondOption.html("reload to get mozart..");
+   firstOption.html('play again or mix');
+   secondOption.html("mozart..");
 
    //modem.play();
    bach.play(); //?
