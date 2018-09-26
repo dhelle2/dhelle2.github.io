@@ -51,7 +51,9 @@ function toHome() {
     //sunSlider.hide();
 
     bach.stop();
-    mozart.play();
+    if(!mozart.isPlaying()) {
+      mozart.play();
+    }
 
     title.html('mozart forever!! (or.. reload to get back to bach..)');
 }
