@@ -17,7 +17,7 @@ var bach;
 
 function preload() {
 
-  text("loading...",100,100);
+  createP("loading...");
 
   spaceBG = loadImage('./images/space.png');
   effect1 = loadImage('./images/effect1.png');
