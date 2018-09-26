@@ -14,6 +14,7 @@ var effect1;
 // sounds
 var modem;
 var bach;
+var mozart;
 
 function preload() {
   // doesn't work:?
@@ -24,6 +25,7 @@ function preload() {
 
   modem = loadSound('./sounds/ModemSound1.mp3'); // he used "audio", "modem.mps"
   bach = loadSound("./sounds/bach.mp3"); // public domain from: http://freemusicarchive.org/tag/bach/ (Kevin MacLeod)
+  mozart = loadSound("./sounds/mozart.mp3"); // public domain from: http://freemusicarchive.org/  from MIT 
 }
 
 //inputs

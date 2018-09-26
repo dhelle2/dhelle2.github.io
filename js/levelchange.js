@@ -16,6 +16,8 @@ function startStory() {
     createElement('br');
     secondOption = createA("#","go home");
 
+    mozart.play();
+
     firstOption.mousePressed(toSun);
     secondOption.mousePressed(toHome);
 }
@@ -40,6 +42,9 @@ function toHome() {
 }
 
 function walkCloserToSun() {
+
+   mozart.stop();
+
    walkToSun = false;
    walkCloser = true;
 
