@@ -30,6 +30,7 @@ function preload() {
 
 //inputs
 var nameInput;
+var bachButton;
 
 //animation variables
 var sunX;

@@ -1,13 +1,15 @@
 function beginning() {
     background(0);
 
-    mozart.play();
+    //mozart.play();
 
-    greeting = createP("Please type your name and press enter:");
+    greeting = createP("Choose your fate!");
     createElement("br");
 
-    nameInput = createInput("type your name here");
+    nameInput = createButton("mozart");
     nameInput.changed(startStory);
+    bachButton = createButton("bach");
+    bachButton.changed(walkCloserToSun);
 }
 
 function startStory() {
