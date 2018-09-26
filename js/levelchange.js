@@ -8,10 +8,12 @@ function beginning() {
 
     nameInput = createButton("mozart");
     //nameInput.changed(startStory);
-    nameInput.clicked(startStory)
+    //nameInput.clicked(startStory)
+    nameInput.mousePressed(startStory);
     bachButton = createButton("bach");
     //bachButton.changed(walkCloserToSun);
-    bachButton.clicked(walkCloserToSun);
+    //bachButton.clicked(walkCloserToSun);
+    bachButton.mousePressed(walkCloserToSun);
 }
 
 function startStory() {
