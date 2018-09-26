@@ -15,8 +15,8 @@ function walkCloserAnim() {
    background(spaceBG);
    //background(255);
    modem.play();
-   image(effect1, 100, 50);
-   //image(spaceBG, 500, 600, 900, 50);
+   //image(effect1, 100, 50);
+   image(spaceBG, 500, 600, 900, 50);
    //fill(sunSlider.value(), 0, 0);
    ellipse(windowWidth/2, windowHeight/2, sunSlider.value(), sunSlider.value() );
    //ellipse(10,10,100,100);
