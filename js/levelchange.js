@@ -13,13 +13,15 @@ function beginning() {
     bachButton = createButton("bach");
     //bachButton.changed(walkCloserToSun);
     //bachButton.clicked(walkCloserToSun);
-    bachButton.mousePressed(walkCloserToSun);
+    //bachButton.mousePressed(walkCloserToSun);
+    bachButton.mousePressed(playBach);
 }
 
 function startStory() {
     greeting.hide();
     nameInput.hide();
     bachButton.hide();
+    bach.stop();
     mozart.play();
     userName = createElement('h1', nameInput.value());
     title = createElement('h1','Get home before the sun goes down')
@@ -52,10 +54,10 @@ function toHome() {
 
 function walkCloserToSun() {
 
-   walkToSun = true;
+  // walkToSun = true;
 
-   nameInput.hide();
-   bachButton.hide();
+   //nameInput.hide();
+   //bachButton.hide();
 
    mozart.stop();
 
@@ -75,4 +77,17 @@ function walkCloserToSun() {
 
    sunSlider = createSlider(0, 255, 0);
    sunSlider.position(50, 600);
+}
+
+function playBach() {
+
+  //nameInput.hide();
+  bachButton.hide();
+
+  background(spaceBG);
+
+  mozart.stop();
+
+
+  bach.play();
 }
