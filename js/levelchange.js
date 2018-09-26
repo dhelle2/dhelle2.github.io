@@ -56,7 +56,7 @@ function walkCloserToSun() {
    secondOption.html("fly away");
 
    //modem.play();
-   bach.play();
+   bach.play(); //?
 
    //mozart.play();
 
