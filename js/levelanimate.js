@@ -14,7 +14,7 @@ function walkCloserAnim() {
 
    background(spaceBG);
    //background(255);
-   modem.play();
+   //modem.play();
    //image(effect1, 100, 50);
    image(spaceBG, 500, 600, 900, 50);
    //fill(sunSlider.value(), 0, 0);
