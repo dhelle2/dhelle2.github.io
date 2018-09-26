@@ -1,4 +1,3 @@
-
 function beginning() {
     background(0);
     greeting = createP("Please type your name and press enter:");
