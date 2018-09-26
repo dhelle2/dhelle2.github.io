@@ -19,6 +19,8 @@ function beginning() {
 function startStory() {
     greeting.hide();
     nameInput.hide();
+    bachButton.hide();
+    mozart.play();
     userName = createElement('h1', nameInput.value());
     title = createElement('h1','Get home before the sun goes down')
     firstOption = createA("#","walk towards the sun");
@@ -49,6 +51,11 @@ function toHome() {
 }
 
 function walkCloserToSun() {
+
+   walkToSun = true;
+
+   nameInput.hide();
+   bachButton.hide();
 
    mozart.stop();
 
