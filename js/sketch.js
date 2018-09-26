@@ -11,12 +11,12 @@ function draw() {
   stroke(110)
   strokeWeight(20)
   //ellipse(400, 500, 100, 100);
-  ellipse(400, 500, mouseX, mouseY);
+  ellipse(400, 500, 50, mouseY);
   if(mouseIsPressed) {
      fill(110)
   }
   else {
-     fill(210)
+     fill(120)
   }
  }
 

@@ -55,8 +55,14 @@ function toHome() {
     if(!mozart.isPlaying()) {
       mozart.play();
     }
-
-    title.html('mozart forever!! (or.. reload to get back to bach..)');
+    
+    //title.hide();
+    //fill("black");
+    //forever = createP('mozart forever!! (or.. reload to get back to bach..)');
+    //forever.style("color","black");
+    title.style("color","gray");
+    title.html('mozart forever!! (reload to get Bach back)');
+    title.position(100,100);
 }
 
 function walkCloserToSun() {
@@ -91,7 +97,7 @@ function playBach() {
   //nameInput.hide();
   bachButton.hide();
 
-  background(spaceBG);
+  background(h);
 
   mozart.stop();
 

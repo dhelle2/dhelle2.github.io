@@ -23,7 +23,7 @@ function preload() {
 
   spaceBG = loadImage('./images/space.png');
   effect1 = loadImage('./images/effect1.png');
-  humboldt = loadImage('./images/HumboldtPark.jpg');
+  h = loadImage('./images/HumboldtPark.jpg');
 
   modem = loadSound('./sounds/ModemSound1.mp3'); // he used "audio", "modem.mps"
   bach = loadSound("./sounds/bach.mp3"); // public domain from: http://freemusicarchive.org/tag/bach/ (Kevin MacLeod)
