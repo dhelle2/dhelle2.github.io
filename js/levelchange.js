@@ -48,6 +48,7 @@ function toSun() {
 function toHome() {
     firstOption.hide();
     secondOption.hide();
+    sunSlider.hide();
 
     bach.stop();
     mozart.play();
