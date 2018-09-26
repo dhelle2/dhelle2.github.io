@@ -1,5 +1,8 @@
 function beginning() {
     background(0);
+
+    mozart.play();
+
     greeting = createP("Please type your name and press enter:");
     createElement("br");
 
@@ -15,8 +18,6 @@ function startStory() {
     firstOption = createA("#","walk towards the sun");
     createElement('br');
     secondOption = createA("#","go home");
-
-    mozart.play();
 
     firstOption.mousePressed(toSun);
     secondOption.mousePressed(toHome);
