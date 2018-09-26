@@ -7,9 +7,11 @@ function beginning() {
     createElement("br");
 
     nameInput = createButton("mozart");
-    nameInput.changed(startStory);
+    //nameInput.changed(startStory);
+    nameInput.clicked("startStory")
     bachButton = createButton("bach");
-    bachButton.changed(walkCloserToSun);
+    //bachButton.changed(walkCloserToSun);
+    bachButton.clicked("walkCloserToSun");
 }
 
 function startStory() {
