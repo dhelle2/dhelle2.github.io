@@ -50,7 +50,8 @@ function walkCloserToSun() {
    firstOption.html('Go home');
    secondOption.html("fly away");
 
-   modem.play();
+   //modem.play();
+   bach.play();
 
    sunSlider = createSlider(0, 255, 0);
    sunSlider.position(50, 600);
