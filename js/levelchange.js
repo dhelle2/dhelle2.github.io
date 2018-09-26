@@ -46,6 +46,7 @@ function toSun() {
 }
 
 function toHome() {
+    background(h);
     firstOption.hide();
     secondOption.hide();
     //sunSlider.hide();
