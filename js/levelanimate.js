@@ -23,10 +23,15 @@ function walkCloserAnim() {
 
 
    if(sunSlider.value() > 200){
-      title.html("You are too close")
+      title.html("faster?")
+      //mozart.speed(sunSlider.value());
+      bach.rate(sunSlider.value());
+      bach.stop();
+      bach.start();
    }
    else {
-      title.html("You are very close to the sun")
+      //mozart.speed(1);
+      bach.rate(1);
    }
 
 }

@@ -25,7 +25,7 @@ function startStory() {
     mozart.play();
     userName = createElement('h1', nameInput.value());
     title = createElement('h1','This is mozart?!?!')
-    firstOption = createA("#","try to find bach again..");
+    firstOption = createA("#","try to find bach..");
     createElement('br');
     secondOption = createA("#","quit");
 
@@ -40,7 +40,7 @@ function toSun() {
 
    title.html("Where is Bach?");
    firstOption.html('keep looking...');
-   secondOption.html("control the sun");
+   secondOption.html("or keep listening to mozart.. forever?");
    firstOption.mousePressed(walkCloserToSun);
 
 }
