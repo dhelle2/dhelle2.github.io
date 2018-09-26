@@ -44,7 +44,7 @@ function toHome() {
 
 function walkCloserToSun() {
 
-   //mozart.stop();
+   mozart.stop();
 
    walkToSun = false;
    walkCloser = true;
@@ -56,9 +56,9 @@ function walkCloserToSun() {
    secondOption.html("fly away");
 
    //modem.play();
-   //bach.play();
+   bach.play();
 
-   mozart.play();
+   //mozart.play();
 
    sunSlider = createSlider(0, 255, 0);
    sunSlider.position(50, 600);
