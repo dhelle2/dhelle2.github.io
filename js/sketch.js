@@ -9,6 +9,8 @@ var c;
 
 var numberDisplay;
 
+var levelDisplay;
+
 
 function setup() {
 
@@ -20,11 +22,15 @@ function setup() {
 
   createCanvas(windowWidth, windowHeight);
 
+  levelDisplay = createElement("h1","Count to 3!!");
+  levelDisplay.style("color","white");
+  levelDisplay.position(400,20);
+
   numberDisplay = createElement("h1","0");
   numberDisplay.style("color","white");
   numberDisplay.position(400,500);
 
-  s = createSlider(1,40,1);
+  s = createSlider(1,30,1);
   //s.value = 1;
   s.position(100,300);
 
@@ -33,12 +39,21 @@ function setup() {
 
 function draw() {
 
+    if(c == 3) {
+      s.hide();
+      numberDisplay.hide();
+      levelDisplay.html("solve the problems to get to the right.."); 
+      scene2();
+      return;
+    }
+
     background(0);
 
     //fill(255);
 
     //number.html("" + c);
-    numberDisplay.html("1");
+    numberDisplay.html("" + c);
+    //numberDisplay.html("1");
 
     xspeed = s.value() * .1;
 
@@ -56,6 +71,8 @@ function draw() {
 
     if (x < -150 ) {
 
+       c = c + 1;
+
        x = windowWidth - 50;
 
        //x = 100;
@@ -67,5 +84,11 @@ function draw() {
     //}
 
     //x = x + xspeed;
+
+}
+
+function scene2() {
+
+   ellipse(mouseX,mouseY,100,100);
 
 }
