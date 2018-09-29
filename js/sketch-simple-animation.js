@@ -13,16 +13,12 @@ function setup() {
 
   createCanvas(windowWidth, windowHeight);
 
-  s = createSlider(1,10,1);
-  //s.value = 1;
-  s.position(100,300);
+  //s = createSlider("test");
 
 }
 
 
 function draw() {
-
-    xspeed = s.value() * .1;
 
     background(255);
 
@@ -43,10 +39,6 @@ function draw() {
        //x = 100;
 
     }
-
-    //if(slider.changed) {
-    //  xspeed = xspeed * slider.value();
-    //}
 
     //x = x + xspeed;
 
