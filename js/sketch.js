@@ -1,26 +1,45 @@
+var xspeed;
+
+var x;
+
+var s;
+
+
 function setup() {
-  // backfround(120);
- // createCanvas(600,600);
-  createCanvas(windowWidth,windowHeight);
-  background(120);
+
+  xspeed =  .1;
+
+  x = 0;
+
+  createCanvas(windowWidth, windowHeight);
+
+  //s = createSlider("test");
+
 }
 
-function draw() {
-  //background(120);
-  //fill(255, 0, 0)
-  stroke(110)
-  strokeWeight(20)
-  //ellipse(400, 500, 100, 100);
-  ellipse(400, 500, 50, mouseY);
-  if(mouseIsPressed) {
-     fill(110)
-  }
-  else {
-     fill(120)
-  }
- }
 
-function windowResized() {
-  resizeCanvas(windowWidth,windowHeight);
-  background(120);
+function draw() {
+
+    background(255);
+
+    translate(round(x),0);
+
+    ellipse(56,83,5,8);
+
+    ellipse(50,100,30,30);
+
+    ellipse(92,120,65,55);
+
+    x = x - xspeed;
+
+    if (x < -150 ) {
+
+       x = windowWidth - 50;
+
+       //x = 100;
+
+    }
+
+    //x = x + xspeed;
+
 }
