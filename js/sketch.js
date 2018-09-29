@@ -24,7 +24,7 @@ function setup() {
   numberDisplay.style("color","white");
   numberDisplay.position(400,500);
 
-  s = createSlider(1,10,1);
+  s = createSlider(1,40,1);
   //s.value = 1;
   s.position(100,300);
 
