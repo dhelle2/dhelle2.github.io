@@ -143,7 +143,8 @@ function start() {
 function scene2() {
 
    if(started) {
-     ellipse(mouseX,mouseY,100,100);
+     //ellipse(mouseX,mouseY,100,100);
+     ellipse(mouseX,mouseY,windowWidth/10,windowHeight/10);
    }
 
    //if(inputTwo.changed) {
