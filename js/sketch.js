@@ -5,13 +5,24 @@ var x;
 var s;
 
 
+var c;
+
+var numberDisplay;
+
+
 function setup() {
+
+  c = 0;
 
   xspeed =  .1;
 
   x = 0;
 
   createCanvas(windowWidth, windowHeight);
+
+  numberDisplay = createElement("h1","0");
+  numberDisplay.style("color","white");
+  numberDisplay.position(400,500);
 
   s = createSlider(1,10,1);
   //s.value = 1;
@@ -22,9 +33,16 @@ function setup() {
 
 function draw() {
 
+    background(0);
+
+    //fill(255);
+
+    //number.html("" + c);
+    numberDisplay.html("1");
+
     xspeed = s.value() * .1;
 
-    background(255);
+    //background(255);
 
     translate(round(x),0);
 
