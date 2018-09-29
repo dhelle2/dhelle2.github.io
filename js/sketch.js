@@ -11,8 +11,19 @@ var numberDisplay;
 
 var levelDisplay;
 
+var top;
+var bottom;
+var right;
+var left;
+
+var b;
+
+var level;
+
 
 function setup() {
+
+  level = 1;
 
   c = 0;
 
@@ -34,15 +45,33 @@ function setup() {
   //s.value = 1;
   s.position(100,300);
 
+  // for scene 2:
+
+  top = false;
+  bottom = false;
+  right = false;
+  left = false;
+
 }
 
 
 function draw() {
 
+    if(level == 4) {
+      scene4();
+      return;
+    }
+
+    if(level == 3) {
+      scene3();
+      return;
+    }
+
     if(c == 3) {
       s.hide();
       numberDisplay.hide();
-      levelDisplay.html("solve the problems to get to the right.."); 
+      levelDisplay.html("divide and conquer"); 
+      level = 2;
       scene2();
       return;
     }
@@ -90,5 +119,67 @@ function draw() {
 function scene2() {
 
    ellipse(mouseX,mouseY,100,100);
+
+   if(mouseX < 20) {
+     left = true;
+   }
+
+   if(mouseY < 0) {
+     top = true;
+   }
+
+   if(mouseY > windowHeight - 20) {
+     bottom = true;
+   }
+
+   if(mouseX > windowWidth - 20) {
+     right = true;
+   }
+
+   if( (top && bottom) || (left && right)  ) {
+     background(255);
+     levelDisplay.html("the end?");
+     levelDisplay.style("color","black");
+     b = createButton("sure!");
+     b.position(100,100);
+     level = 3;
+     scene3();
+     return;
+   }
+
+}
+
+
+function scene3() {
+
+   background(255);
+
+   fill(0);
+
+   triangle(mouseX,20,100);
+
+   //if(b.mousePressed) {
+   //  scene4();
+   //  return;
+   //}
+
+   b.mousePressed(preScene4);
+
+}
+
+function preScene4() {
+   
+   b.hide();
+   scene4();
+
+}
+
+function scene4() {
+
+  if(level != 4) {
+     level = 4;
+  }
+
+  background(0);
 
 }
