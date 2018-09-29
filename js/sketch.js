@@ -20,8 +20,14 @@ var b;
 
 var level;
 
+// level 2:
+var started;
+
+var inputTwo;
 
 function setup() {
+
+  started = false;
 
   level = 1;
 
@@ -54,7 +60,6 @@ function setup() {
 
 }
 
-
 function draw() {
 
     if(level == 4) {
@@ -67,11 +72,21 @@ function draw() {
       return;
     }
 
+    if(level == 2) {
+      scene2();
+      return;
+    }
+
     if(c == 3) {
       s.hide();
       numberDisplay.hide();
       levelDisplay.html("divide and conquer"); 
       level = 2;
+      inputTwo = createInput("type something..");
+      inputTwo.position(500,500);
+      inputTwo.changed(start);
+      //inputTwo.keyReleased(start); 
+      //inputTwo.input(start);
       scene2();
       return;
     }
@@ -116,9 +131,20 @@ function draw() {
 
 }
 
+function start() {
+  started = true;
+  inputTwo.hide();
+}
+
 function scene2() {
 
-   ellipse(mouseX,mouseY,100,100);
+   if(started) {
+     ellipse(mouseX,mouseY,100,100);
+   }
+
+   //if(inputTwo.changed) {
+   //  started = true;
+   //}
 
    if(mouseX < 20) {
      left = true;
@@ -136,7 +162,7 @@ function scene2() {
      right = true;
    }
 
-   if( (top && bottom) || (left && right)  ) {
+   if( started && ( (top && bottom) || (left && right) ) ) {
      background(255);
      levelDisplay.html("the end?");
      levelDisplay.style("color","black");
