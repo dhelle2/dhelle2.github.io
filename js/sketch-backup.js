@@ -41,18 +41,15 @@ function setup() {
 
   levelDisplay = createElement("h1","Count to 3!!");
   levelDisplay.style("color","white");
-  //levelDisplay.position(400,20);
-  levelDisplay.position(windowWidth/2,20);
+  levelDisplay.position(400,20);
 
   numberDisplay = createElement("h1","0");
   numberDisplay.style("color","white");
-  //numberDisplay.position(400,500);
-  numberDisplay.position(windowHeight/2,windowWidth/2-20);
+  numberDisplay.position(400,500);
 
   s = createSlider(1,30,1);
   //s.value = 1;
-  //s.position(100,300);
-  s.position(windowWidth/3,4*windowHeight/5);
+  s.position(100,300);
 
   // for scene 2:
 
@@ -86,8 +83,7 @@ function draw() {
       levelDisplay.html("divide and conquer"); 
       level = 2;
       inputTwo = createInput("type something..");
-      //inputTwo.position(500,500);
-      inputTwo.position(windowWidth/2,windowHeight/2);
+      inputTwo.position(500,500);
       inputTwo.changed(start);
       //inputTwo.keyReleased(start); 
       //inputTwo.input(start);
