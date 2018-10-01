@@ -45,9 +45,9 @@ function setup() {
   levelDisplay.position(windowWidth/2,20);
 
   numberDisplay = createElement("h1","0");
-  numberDisplay.style("color","white");
+  numberDisplay.style("color","gray");
   //numberDisplay.position(400,500);
-  numberDisplay.position(windowHeight/2,windowWidth/2-20);
+  numberDisplay.position(windowHeight/2-50,windowWidth/2);
 
   s = createSlider(1,30,1);
   //s.value = 1;
