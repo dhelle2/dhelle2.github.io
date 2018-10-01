@@ -45,7 +45,7 @@ function setup() {
   levelDisplay.position(windowWidth/2,20);
 
   numberDisplay = createElement("h1","0");
-  numberDisplay.style("color","white");
+  numberDisplay.style("color","grey");
   //numberDisplay.position(400,500);
   numberDisplay.position(windowWidth/2-20,windowHeight/2);
 
