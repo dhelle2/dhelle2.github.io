@@ -7,7 +7,7 @@ function preload() {
     i = loadImage("http://ia600202.us.archive.org/7/items/FrankenberryCountChoculaTevevisionCommercial1971/FrankenberryCountChoculaTevevisionCommercial1971.thumbs/frankerberry_countchockula_1971.0001_000029.jpg");
     print("loaded?");
 	loadJSON("https://archive.org/metadata/FrankenberryCountChoculaTevevisionCommercial1971",done);
-	loadJSON("http://gutendex.com/books/",mozart);
+	//loadJSON("http://gutendex.com/books/",mozart);
 }
 
 function done(data) {
