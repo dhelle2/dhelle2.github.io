@@ -36,7 +36,7 @@ function draw() {
 	
     if(l) {
 	var i;
-    	for(i=0;i<data.length;i++) {
+    	for(i=0;i<5) { //<data.length;i++) {
 	a.option("" + i,"" + i);
        }
        l = 0;
