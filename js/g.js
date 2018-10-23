@@ -10,8 +10,8 @@ function preload() {
 }
 
 function done(data) {
-    print(data);
-    text(data.name,10,10);
+    print(data,name);
+    //text(data.name,10,10);
     //i = loadImage("http://ia600202.us.archive.org/7/items/FrankenberryCountChoculaTevevisionCommercial1971/FrankenberryCountChoculaTevevisionCommercial1971.thumbs/frankerberry_countchockula_1971.0001_000029.jpg")
 }
 
