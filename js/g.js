@@ -27,18 +27,19 @@ function mozart(data){
 
 function setup() {
 	createCanvas(windowWidth,windowHeight);
-	image(i,100,100);
+	//image(i,100,100);
+	s = createSelect();
+    	s.position(20,20);
 }
 
 function draw() {
 	
     if(l) {
 	var i;
-    	s = createSelect();
-    	s.position(20,20);
     	for(i=0;i<data.length;i++) {
 	a.option("" + i,"" + i);
-       }	
+       }
+       l = 0;
     }
 	//if(i) {
 		//image(i,100,100);
