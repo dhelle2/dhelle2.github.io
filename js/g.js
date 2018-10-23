@@ -2,6 +2,7 @@
 
 var i;
 var s;
+var l;
 
 function preload() {
 	print("start...");
@@ -12,14 +13,12 @@ function preload() {
 
 function done(data) {
     print(data.length);
-    var i;
-    s = createSelect();
-    s.position(20,20);
-    for(i=0;i<data.length;i++) {
-	a.option("" + i,"" + i);
-    }
+
     //text(data.name,10,10);
     //i = loadImage("http://ia600202.us.archive.org/7/items/FrankenberryCountChoculaTevevisionCommercial1971/FrankenberryCountChoculaTevevisionCommercial1971.thumbs/frankerberry_countchockula_1971.0001_000029.jpg")
+    
+    l = 1; // loaded
+
 }
 
 function mozart(data){
@@ -32,6 +31,15 @@ function setup() {
 }
 
 function draw() {
+	
+    if(l) {
+	var i;
+    	s = createSelect();
+    	s.position(20,20);
+    	for(i=0;i<data.length;i++) {
+	a.option("" + i,"" + i);
+       }	
+    }
 	//if(i) {
 		//image(i,100,100);
 		//i = null;
