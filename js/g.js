@@ -12,7 +12,8 @@ function preload() {
 
 function done(data) {
     print(data.length);
-    for(var i-0;i<data.length;i++) {
+    var i;
+    for(i=0;i<data.length;i++) {
 	s = createSelect();
 	select.option(i,i);
     }
