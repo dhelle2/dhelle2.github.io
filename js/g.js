@@ -16,7 +16,7 @@ function done(data) {
     s = createSelect();
     s.position(20,20);
     for(i=0;i<data.length;i++) {
-	a.option(i,i);
+	a.option("" + i,"" + i);
     }
     //text(data.name,10,10);
     //i = loadImage("http://ia600202.us.archive.org/7/items/FrankenberryCountChoculaTevevisionCommercial1971/FrankenberryCountChoculaTevevisionCommercial1971.thumbs/frankerberry_countchockula_1971.0001_000029.jpg")
