@@ -35,8 +35,10 @@ function setup() {
 function draw() {
 	
     if(l) {
+	print("l not zero");
 	var i;
     	for(i=0;i<5) { //<data.length;i++) {
+	print(i);
 	a.option("" + i,"" + i);
        }
        l = 0;
