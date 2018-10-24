@@ -53,12 +53,9 @@ function setup() {
 	b = createButton("place it")
 	b.position(20,100);
 	b.mousePressed(place);
-	print("setup done 6");
+	print("setup done 7");
 }
 
-function c() {
-	print("changed");
-}
 
 //function locchange() {
   	//print(a.value());
@@ -95,4 +92,8 @@ function draw() {
 		//i = null;
 	//} 
  
+}
+
+function c() {
+	print("changed");
 }
