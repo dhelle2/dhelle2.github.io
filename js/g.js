@@ -54,7 +54,8 @@ function setup() {
 }
 
 function locchange() {
-  	print(a.value());
+  	//print(a.value());
+	print("changed");
 }
 
 function place() {  
