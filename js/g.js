@@ -53,7 +53,7 @@ function setup() {
 	b = createButton("place it")
 	b.position(20,100);
 	b.mousePressed(place);
-	print("setup done 16");
+	print("setup done 17");
 }
 
 
@@ -74,7 +74,7 @@ function place() {
    
    text("" + obd,random(windowWidth),random(windowHeight));
 	
-   loadJSON("https://goweather.herokuapp.com/weather/" + ob,name,we);
+   loadJSON("https://goweather.herokuapp.com/weather/" + ob.name,we);
 }
 
 function we(data) {
