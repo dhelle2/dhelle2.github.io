@@ -57,7 +57,7 @@ function setup() {
 }
 
 function c() {
-	
+	print("changed");
 }
 
 //function locchange() {
