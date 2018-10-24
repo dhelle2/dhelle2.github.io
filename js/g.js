@@ -65,11 +65,13 @@ function setup() {
 function place() {  
    print(place);
    print(d[s.value()]);
-   var ob = d[s.value()];
-   print(ob[attrs.value()]);
+   var ob = d[s.value()]; 
+   var obd = ob[attrs.value()];
+   print(obd);
+
    //text(d[s.value()].attrs.value(),random(windowWidth),random(windowHeight));	
    //text(d[loc].attrs.value(),random(windowWidth),random(windowHeight));
-   text(ob[attrs.value{}],random(windowWidth),random(windowHeight()));
+   text("" + obd,random(windowWidth),random(windowHeight));
 }
 
 function draw() {
