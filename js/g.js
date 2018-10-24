@@ -16,7 +16,7 @@ function preload() {
 
 function done(data) {
     for(o in data[0]) {
-	print(data);    
+	print(o);    
     }
 	
     print(data.length);
