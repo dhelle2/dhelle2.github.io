@@ -7,6 +7,7 @@ var le;
 var d;
 var attrs;
 var b;
+var count;
 
 function preload() {
 	print("start...");
@@ -41,6 +42,7 @@ function mozart(data){
 }
 
 function setup() {
+	count = 0;
         print("setup started..");
 	createCanvas(windowWidth,windowHeight);
 	//image(i,100,100);
@@ -76,7 +78,10 @@ function place() {
 
    var loc = "https://goweather.herokuapp.com/weather/" + ob.name;
    print(loc);
-   loadJSON(loc,we);
+   if(count > 7) {
+     loadJSON(loc,we);  
+   }
+   count++;
 }
 
 function we(data) {
