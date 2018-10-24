@@ -53,7 +53,7 @@ function draw() {
 	var i;
     	//for(i=0;i<5;i++) { 
 	for(i=0;i<le;i++) {
-	  print(i);
+	  //print(i);
 	  //s.option("" + i);
 	  s.option(d[i].name);
         }
