@@ -71,11 +71,11 @@ function setup() {
 function weatht() {
   if(won) {
      won = 0;
-     weat.text="'weather' on");
+     weat.text="'weather' on";
   }
   else {
      won = 1;
-     weat.text="'weather' off");
+     weat.text="'weather' off";
   }
 }
 
