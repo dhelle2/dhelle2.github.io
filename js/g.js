@@ -82,7 +82,8 @@ function place() {
 function we(data) {
    print("in we...");
    co = data.temperature;
-   fill(co*10);
+   print(co);
+   //fill(co*10);
    text(co,random(windowWidth),random(windowHeight));
 }
 
