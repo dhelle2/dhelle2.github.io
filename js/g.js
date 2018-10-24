@@ -37,7 +37,8 @@ function draw() {
     if(l) {
 	print("l not zero");
 	var i;
-    	for(i=0;i<5;i++) { //<data.length;i++) {
+    	//for(i=0;i<5;i++) { /
+	for(i=0;i<data.length;i++) {
 	  print(i);
 	  s.option("" + i);
         }
