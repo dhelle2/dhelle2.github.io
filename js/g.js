@@ -16,6 +16,8 @@ function done(data) {
     print(data.length);
 	
     le = data.length;
+	
+    print("le: " + le);
 
     //text(data.name,10,10);
     //i = loadImage("http://ia600202.us.archive.org/7/items/FrankenberryCountChoculaTevevisionCommercial1971/FrankenberryCountChoculaTevevisionCommercial1971.thumbs/frankerberry_countchockula_1971.0001_000029.jpg")
@@ -36,12 +38,13 @@ function setup() {
 }
 
 function draw() {
-	
+ 
     if(l) {
 	print("l not zero");
+	print("le: " + le);
 	var i;
-    	for(i=0;i<5;i++) { 
-	//for(i=0;i<le;i++) {
+    	//for(i=0;i<5;i++) { 
+	for(i=0;i<le;i++) {
 	  print(i);
 	  s.option("" + i);
         }
