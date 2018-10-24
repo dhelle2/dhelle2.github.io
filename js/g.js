@@ -5,6 +5,7 @@ var s;
 var l;
 var le;
 var d;
+var attrs;
 
 function preload() {
 	print("start...");
@@ -42,7 +43,9 @@ function setup() {
 	createCanvas(windowWidth,windowHeight);
 	//image(i,100,100);
 	s = createSelect();
+	attrs = createSelect();
     	s.position(20,20);
+	attrs.position(20,60);
 }
 
 function draw() {
@@ -57,6 +60,10 @@ function draw() {
 	  //s.option("" + i);
 	  s.option(d[i].name);
         }
+	var o;
+	for(o in d[0]) {
+	  attrs.option(o);	
+	}
         l = 0;
     }
 	//if(i) {
