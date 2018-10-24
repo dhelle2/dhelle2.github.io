@@ -57,7 +57,7 @@ function setup() {
 	b = createButton("place it")
 	b.position(20,100);
 	b.mousePressed(place);
-	print("setup done 35");
+	print("setup done 53");
 	weat = createButton("turn 'weather' on");
 	weat.position(20,140);
 	weat.mousePressed(weatht);
