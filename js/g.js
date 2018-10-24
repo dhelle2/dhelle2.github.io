@@ -71,7 +71,16 @@ function place() {
 
    //text(d[s.value()].attrs.value(),random(windowWidth),random(windowHeight));	
    //text(d[loc].attrs.value(),random(windowWidth),random(windowHeight));
+   
    text("" + obd,random(windowWidth),random(windowHeight));
+	
+   loadJSON("https://goweather.herokuapp.com/weather/" + ob,name,we);
+}
+
+function we(data) {
+   co = data.temperature;
+   fill(co*10);
+   text(co,random(windowWidth,random(windowHeight));
 }
 
 function draw() {
