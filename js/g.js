@@ -48,7 +48,8 @@ function setup() {
     	s.position(20,20);
 	a.changed(locchange);
 	attrs.position(20,60);
-	b = createButton("place it",20,80);
+	b = createButton("place it")
+	b.position(20,80);
 	b.mousePressed(place);
 }
 
