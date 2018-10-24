@@ -55,10 +55,10 @@ function setup() {
 	print("setup done 1");
 }
 
-function locchange() {
+//function locchange() {
   	//print(a.value());
-	print("changed");
-}
+//	print("changed");
+//}
 
 function place() {  
    print(place);
