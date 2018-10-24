@@ -41,6 +41,7 @@ function mozart(data){
 }
 
 function setup() {
+        print("setup started..");
 	createCanvas(windowWidth,windowHeight);
 	//image(i,100,100);
 	s = createSelect();
