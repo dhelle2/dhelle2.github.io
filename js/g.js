@@ -46,16 +46,16 @@ function setup() {
 	s = createSelect();
 	attrs = createSelect();
     	s.position(20,20);
-	//a.changed(locchange);
+	a.changed(locchange);
 	attrs.position(20,60);
 	b = createButton("place it")
 	b.position(20,100);
 	b.mousePressed(place);
 }
 
-//function locchange() {
-//  	print(a.value());
-//}
+function locchange() {
+  	print(a.value());
+}
 
 function place() {  
    print(place);
