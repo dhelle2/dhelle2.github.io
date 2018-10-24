@@ -78,11 +78,11 @@ function place() {
 
    var loc = "https://goweather.herokuapp.com/weather/" + ob.name;
    print(loc);
-   if(count > 7) {
+   //if(count > 7) {
      loadJSON(loc,we);    
-     count = 0;
-   }
-   count++;
+     //count = 0;
+   //}
+   //count++;
 }
 
 function we(data) {
