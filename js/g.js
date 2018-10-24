@@ -48,19 +48,20 @@ function setup() {
     	s.position(20,20);
 	//a.changed(locchange);
 	attrs.position(20,60);
-	//b = createButton("place it")
-	//b.position(20,80);
-	//b.mousePressed(place);
+	b = createButton("place it")
+	b.position(20,100);
+	b.mousePressed(place);
 }
 
 //function locchange() {
 //  	print(a.value());
 //}
 
-//function place() {
+function place() {  
+   print(place);
    //text(d[loc].attrs.value(),random(windowWidth),random(windowHeight));	
    //text(d[loc].attrs.value(),random(windowWidth),random(windowHeight));
-//}
+}
 
 function draw() {
  
