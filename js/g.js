@@ -85,7 +85,7 @@ function draw() {
 	  attrs.option(o);	
 	}
         l = 0;
-	a.changed(c);
+	s.changed(c);
     }
 	//if(i) {
 		//image(i,100,100);
