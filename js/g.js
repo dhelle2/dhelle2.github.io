@@ -15,6 +15,10 @@ function preload() {
 }
 
 function done(data) {
+    for(o in data[0]) {
+	print(data);    
+    }
+	
     print(data.length);
 	
     le = data.length;
