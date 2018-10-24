@@ -53,7 +53,7 @@ function setup() {
 	b = createButton("place it")
 	b.position(20,100);
 	b.mousePressed(place);
-	print("setup done 11");
+	print("setup done 12");
 }
 
 
@@ -65,6 +65,8 @@ function setup() {
 function place() {  
    print(place);
    print(d[s.value()]);
+   var ob = d[s.value()];
+   print(ob[attrs.value()]);
    //text(d[s.value()].attrs.value(),random(windowWidth),random(windowHeight));	
    //text(d[loc].attrs.value(),random(windowWidth),random(windowHeight));
 }
