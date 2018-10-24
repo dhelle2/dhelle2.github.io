@@ -8,6 +8,7 @@ var d;
 var attrs;
 var b;
 var count;
+var won;
 
 function preload() {
 	print("start...");
@@ -55,7 +56,10 @@ function setup() {
 	b = createButton("place it")
 	b.position(20,100);
 	b.mousePressed(place);
-	print("setup done 18");
+	print("setup done 26");
+	weat = createButton("'weather' on");
+	weat.position(20,140);
+	weat.mousePressed(weatht);
 }
 
 
@@ -63,6 +67,17 @@ function setup() {
   	//print(a.value());
 //	print("changed");
 //}
+
+function weatht() {
+  if(won) {
+     won = 0;
+     weat.text="'weather' on");
+  }
+  else {
+     won = 1;
+     weat.text="'weather' off");
+  }
+}
 
 function place() {  
    print(place);
@@ -79,7 +94,9 @@ function place() {
    var loc = "https://goweather.herokuapp.com/weather/" + ob.name;
    print(loc);
    //if(count > 7) {
-     loadJSON(loc,we);    
+     if(won) {
+       loadJSON(loc,we);    
+     }
      //count = 0;
    //}
    //count++;
