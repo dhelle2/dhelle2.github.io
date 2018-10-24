@@ -69,7 +69,7 @@ function place() {
    print(ob[attrs.value()]);
    //text(d[s.value()].attrs.value(),random(windowWidth),random(windowHeight));	
    //text(d[loc].attrs.value(),random(windowWidth),random(windowHeight));
-   text(ob[attrs.value{},random(windowWidth),random(windowHeight()));
+   text(ob[attrs.value{}],random(windowWidth),random(windowHeight()));
 }
 
 function draw() {
