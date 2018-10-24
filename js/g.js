@@ -4,6 +4,7 @@ var i;
 var s;
 var l;
 var le;
+var d;
 
 function preload() {
 	print("start...");
@@ -16,6 +17,8 @@ function done(data) {
     print(data.length);
 	
     le = data.length;
+	 
+    d = data;
 	
     print("le: " + le);
 
@@ -46,12 +49,14 @@ function draw() {
     	//for(i=0;i<5;i++) { 
 	for(i=0;i<le;i++) {
 	  print(i);
-	  s.option("" + i);
+	  //s.option("" + i);
+	  s.option(data[i].name);
         }
         l = 0;
     }
 	//if(i) {
 		//image(i,100,100);
 		//i = null;
-	//}
+	//} 
+ 
 }
