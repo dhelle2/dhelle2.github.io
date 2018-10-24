@@ -9,6 +9,7 @@ var attrs;
 var b;
 var count;
 var won;
+var weat;
 
 function preload() {
 	print("start...");
@@ -71,11 +72,11 @@ function setup() {
 function weatht() {
   if(won) {
      won = 0;
-     weat.label="turn 'weather' on";
+     weat.value="turn 'weather' on";
   }
   else {
      won = 1;
-     weat.label="'turn weather' off";
+     weat.value="'turn weather' off";
   }
 }
 
