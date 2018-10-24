@@ -56,8 +56,8 @@ function setup() {
 	b = createButton("place it")
 	b.position(20,100);
 	b.mousePressed(place);
-	print("setup done 26");
-	weat = createButton("'weather' on");
+	print("setup done 35");
+	weat = createButton("turn 'weather' on");
 	weat.position(20,140);
 	weat.mousePressed(weatht);
 }
@@ -71,11 +71,11 @@ function setup() {
 function weatht() {
   if(won) {
      won = 0;
-     weat.text="'weather' on";
+     weat.label="turn 'weather' on";
   }
   else {
      won = 1;
-     weat.text="'weather' off";
+     weat.label="'turn weather' off";
   }
 }
 
