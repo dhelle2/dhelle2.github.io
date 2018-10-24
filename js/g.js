@@ -40,7 +40,7 @@ function draw() {
     if(l) {
 	print("l not zero");
 	var i;
-    	for(i=0;i<5;i++) { /
+    	for(i=0;i<5;i++) { 
 	//for(i=0;i<le;i++) {
 	  print(i);
 	  s.option("" + i);
