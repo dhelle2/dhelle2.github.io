@@ -52,7 +52,11 @@ function setup() {
 	b = createButton("place it")
 	b.position(20,100);
 	b.mousePressed(place);
-	print("setup done 1");
+	print("setup done 2");
+}
+
+function c() {
+	
 }
 
 //function locchange() {
