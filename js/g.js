@@ -53,7 +53,7 @@ function setup() {
 	b = createButton("place it")
 	b.position(20,100);
 	b.mousePressed(place);
-	print("setup done 8");
+	print("setup done 9");
 }
 
 
@@ -96,4 +96,5 @@ function draw() {
 
 function c() {
 	print("changed");
+	print(s.value());
 }
