@@ -6,6 +6,7 @@ var l;
 var le;
 var d;
 var attrs;
+var b;
 
 function preload() {
 	print("start...");
@@ -45,7 +46,19 @@ function setup() {
 	s = createSelect();
 	attrs = createSelect();
     	s.position(20,20);
+	//a.changed(locchange);
 	attrs.position(20,60);
+	b = createButton("place it",20,80);
+	b.mousePressed(place);
+}
+
+function locChange() {
+  	print(a.value());
+}
+
+function place() {
+   //text(d[loc].attrs.value(),random(windowWidth),random(windowHeight));	
+   //text(d[loc].attrs.value(),random(windowWidth),random(windowHeight));
 }
 
 function draw() {
@@ -58,7 +71,7 @@ function draw() {
 	for(i=0;i<le;i++) {
 	  //print(i);
 	  //s.option("" + i);
-	  s.option(d[i].name);
+	  s.option(d[i].name,i);
         }
 	var o;
 	for(o in d[0]) {
