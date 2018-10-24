@@ -53,7 +53,7 @@ function setup() {
 	b = createButton("place it")
 	b.position(20,100);
 	b.mousePressed(place);
-	print("setup done 4");
+	print("setup done 5");
 }
 
 function c() {
@@ -88,6 +88,7 @@ function draw() {
 	  attrs.option(o);	
 	}
         l = 0;
+	a.changed(c);
     }
 	//if(i) {
 		//image(i,100,100);
