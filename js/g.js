@@ -39,7 +39,7 @@ function draw() {
 	var i;
     	for(i=0;i<5;i++) { //<data.length;i++) {
 	print(i);
-	a.option("" + i,"" + i);
+	a.option("" + i);
        }
        l = 0;
     }
