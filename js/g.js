@@ -80,7 +80,7 @@ function place() {
 function we(data) {
    co = data.temperature;
    fill(co*10);
-   text(co,random(windowWidth,random(windowHeight));
+   text(co,random(windowWidth),random(windowHeight));
 }
 
 function draw() {
