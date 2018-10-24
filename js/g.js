@@ -48,12 +48,12 @@ function setup() {
 	attrs = createSelect();
     	s.position(20,20);
 	//a.changed(locchange);
-	a.changed(c);
+	//a.changed(c);
 	attrs.position(20,60);
 	b = createButton("place it")
 	b.position(20,100);
 	b.mousePressed(place);
-	print("setup done 3");
+	print("setup done 4");
 }
 
 function c() {
