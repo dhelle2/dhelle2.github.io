@@ -38,10 +38,10 @@ function draw() {
 	print("l not zero");
 	var i;
     	for(i=0;i<5;i++) { //<data.length;i++) {
-	print(i);
-	a.option("" + i);
-       }
-       l = 0;
+	  print(i);
+	  s.option("" + i);
+        }
+        l = 0;
     }
 	//if(i) {
 		//image(i,100,100);
