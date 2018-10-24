@@ -50,7 +50,7 @@ function draw() {
 	for(i=0;i<le;i++) {
 	  print(i);
 	  //s.option("" + i);
-	  s.option(data[i].name);
+	  s.option(d[i].name);
         }
         l = 0;
     }
