@@ -7,9 +7,6 @@ var le;
 var d;
 var attrs;
 var b;
-var count;
-var won;
-var weat;
 
 function preload() {
 	print("start...");
@@ -44,7 +41,6 @@ function mozart(data){
 }
 
 function setup() {
-	count = 0;
         print("setup started..");
 	createCanvas(windowWidth,windowHeight);
 	//image(i,100,100);
@@ -57,10 +53,7 @@ function setup() {
 	b = createButton("place it")
 	b.position(20,100);
 	b.mousePressed(place);
-	print("setup done 107");
-	weat = createButton("'weather'");
-	weat.position(20,140);
-	weat.mousePressed(weatht);
+	print("setup done 18");
 }
 
 
@@ -68,17 +61,6 @@ function setup() {
   	//print(a.value());
 //	print("changed");
 //}
-
-function weatht() {
-  if(won) {
-     won = 0;
-     weat.innerHTML="turn 'weather' on";
-  }
-  else {
-     won = 1;
-     weat.innerHTML="'turn weather' off";
-  }
-}
 
 function place() {  
    print(place);
@@ -94,13 +76,7 @@ function place() {
 
    var loc = "https://goweather.herokuapp.com/weather/" + ob.name;
    print(loc);
-   //if(count > 7) {
-     if(won) {
-       loadJSON(loc,we);    
-     }
-     //count = 0;
-   //}
-   //count++;
+   loadJSON(loc,we);
 }
 
 function we(data) {
