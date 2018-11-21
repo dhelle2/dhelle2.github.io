@@ -8,17 +8,23 @@
       <script> 
          
          var feet;
+         var playing;
 
          function setup() {
             createCanvas(500,500);
             f = createVideo("videos/IMG_7900.MOV");
-            f.loop();
+            playing = False;
+            //f.loop();
          }
 
          function draw() {
             background(100);
             text("test",150,150);
             f.position(mouseX,mouseY);
+            if(!playing) {
+               f.loop();
+               playing = True;
+            }
          }  
 
       </script>
