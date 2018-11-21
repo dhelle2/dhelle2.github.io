@@ -6,9 +6,13 @@
       <script src="js/p5.dom.min.js"> </script>
 
       <script> 
+         
+         var feet;
 
          function setup() {
             createCanvas(500,500);
+            f = createVideo("videos/IMG_7900.MOV");
+            f.loop();
          }
 
          function draw() {
