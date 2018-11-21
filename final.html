@@ -12,7 +12,7 @@
 
          function setup() {
             createCanvas(500,500);
-            f = createVideo("videos/IMG_7900.MOV");
+            feet = createVideo("videos/IMG_7900.MOV");
             playing = False;
             //f.loop();
          }
@@ -20,9 +20,9 @@
          function draw() {
             background(100);
             text("test",150,150);
-            f.position(mouseX,mouseY);
+            //f.position(mouseX,mouseY);
             if(!playing) {
-               f.loop();
+               feet.loop();
                playing = True;
             }
          }  
