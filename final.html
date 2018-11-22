@@ -9,6 +9,7 @@
          
          var feet;
          var playing;
+         var moving;
 
          function setup() {
             createCanvas(500,500);
@@ -20,12 +21,16 @@
          function draw() {
             background(100);
             text("test",150,150);
-            feet.position(mouseX,mouseY);
+            if(moving) feet.position(mouseX,mouseY);
             if(!playing) {
                feet.loop();
                playing = true;
             }
          }  
+         
+         function mousePressed() {
+            moving = !moving;
+         }
 
       </script>
 
