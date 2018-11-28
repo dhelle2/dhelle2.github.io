@@ -15,6 +15,7 @@
             createCanvas(500,500);
             //feet = createVideo("videos/IMG_7900.MOV");
             feet = createVideo("videos/M.ogv");
+            feet.size(300,300);
             //feet = createVideo("videos/M.mkv");
             playing = false;
             //f.loop();
@@ -34,6 +35,7 @@
          function mousePressed() {
             moving = !moving;
             playing = !playing;
+            feet.speed = -1;
          }
 
       </script>
