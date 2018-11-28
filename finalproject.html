@@ -1,0 +1,62 @@
+<html>
+
+   <head>
+
+      <script src="js/p5.min.js"> </script>
+      <script src="js/p5.dom.min.js"> </script>
+
+      <script> 
+         
+         var feet;
+         var playing;
+         var moving;
+
+         function setup() {
+            //createCanvas(500,500);
+            //feet = createVideo("videos/IMG_7900.MOV");
+            feet = createVideo("videos/M.ogv");
+            feet.size(300,300);
+            //feet = createVideo("videos/M.mkv");
+            playing = false;
+            //f.loop();
+         }
+
+         function draw() {
+            if(mouseIsPressed) {
+               //feet.speed(-feet.speed);
+               //feet.speed(-1);
+               //feet.playbackRate = -1.0;
+               //feet.stop(); 
+               //feet.loop();
+               //document.getElementsByTagName("video")[0].playbackRate = -1.0;
+               feet.loop();
+               document.getElementsByTagName("video")[0].playbackRate = .25;//= 2.0;
+               moving = !moving;
+            }
+            //background(100);
+            //text("test",150,150);
+            if(moving) feet.position(mouseX,mouseY);
+            if(!playing) {
+               //feet.loop();
+               playing = true;
+               //playing = true;
+            }
+         }  
+         
+         function mousePressed() {
+            moving = !moving;
+            playing = !playing;
+            feet.speed = -1;
+            feet.stop();
+            //feet.loop();
+         }
+
+      </script>
+
+   </head>
+ 
+   <body>
+      
+   </body>
+
+</html>
