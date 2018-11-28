@@ -29,12 +29,13 @@
                //feet.stop(); 
                //feet.loop();
                document.getElementsByTagName("video")[0].playbackRate = -1.0;
+               feet.loop();
             }
             background(100);
             text("test",150,150);
             if(moving) feet.position(mouseX,mouseY);
             if(!playing) {
-               feet.loop();
+               //feet.loop();
                playing = true;
                //playing = true;
             }
