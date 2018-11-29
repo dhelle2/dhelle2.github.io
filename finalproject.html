@@ -18,7 +18,7 @@
             feet.size(300,300);
             //feet = createVideo("videos/M.mkv");
             playing = false;
-            //f.loop();
+            document.getElementsByTagName("video")[0].currentTime = 1.5;
          }
 
          function draw() {
@@ -30,7 +30,8 @@
                //feet.loop();
                //document.getElementsByTagName("video")[0].playbackRate = -1.0;
                feet.loop();
-               document.getElementsByTagName("video")[0].playbackRate = .25;//= 2.0;
+               //document.getElementsByTagName("video")[0].playbackRate = .25;//= 2.0;
+               document.getElementsByTagName("video")[0].currentTime -= .01//= 2.0;
                moving = !moving;
             }
             //background(100);
