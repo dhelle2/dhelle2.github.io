@@ -10,6 +10,24 @@
          var feet;
          var playing;
          var moving;
+         
+         //http://nicbell.net/blog/playing-html5-video-backwards/
+         HTMLVideoElement.prototype.playBackwards = function() {
+    this.pause();
+
+    var video = this;
+
+    var fps = 25;
+    var intervalRewind = setInterval(function() {
+        if(video.currentTime == 0){
+           clearInterval(intervalRewind);
+           video.pause();
+        }
+        else {
+            video.currentTime += -(1/fps);
+        }
+    }, 1000 / fps);
+};
 
          function setup() {
             //createCanvas(500,500);
@@ -18,7 +36,7 @@
             feet.size(300,300);
             //feet = createVideo("videos/M.mkv");
             playing = false;
-            document.getElementsByTagName("video")[0].currentTime = document.getElementsByTagName("video")[0].duration// feet.duration;//1.5;
+            //document.getElementsByTagName("video")[0].playBackwards();//.currentTime = document.getElementsByTagName("video")[0].duration// feet.duration;//1.5;
          }
 
          function draw() {
@@ -35,17 +53,19 @@
                moving = !moving;
                
                // https://codepen.io/blackgghost/pen/XBxXJN?editors=0010
-               intervalRewind = setInterval(function(){
+               /*intervalRewind = setInterval(function(){
        //video.playbackRate = 1.0;
        if(feet.currentTime == 0){
            clearInterval(intervalRewind);
            //feet.pause();
-       }
-       else{
+       }*/
+               
+               document.getElementsByTagName("video")[0].playBackwards();
+       /*else{
            feet.currentTime += -.1;
        }
                 },30);
-            }
+            }*/
             
             //
             
