@@ -33,10 +33,24 @@
                //document.getElementsByTagName("video")[0].playbackRate = .25;//= 2.0;
                //document.getElementsByTagName("video")[0].currentTime -= .01//= 2.0;
                moving = !moving;
+               
+               // https://codepen.io/blackgghost/pen/XBxXJN?editors=0010
+               intervalRewind = setInterval(function(){
+       video.playbackRate = 1.0;
+       if(video.currentTime == 0){
+           clearInterval(intervalRewind);
+           video.pause();
+       }
+       else{
+           video.currentTime += -.1;
+       }
+                },30);
             }
             
+            //
+            
             if(moving) {
-               document.getElementsByTagName("video")[0].currentTime -= .1//= 2.0;
+               //document.getElementsByTagName("video")[0].currentTime -= .1//= 2.0;
             }
             //background(100);
             //text("test",150,150);
