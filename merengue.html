@@ -10,10 +10,17 @@
          var feet;
          var playing;
          var moving;
+         var dl;
+         
+         preload() {
+           feet = createVideo("videos/M.ogv");  
+           dl = true;
+         }
+         
          function setup() {
             createCanvas(300,100);
             //feet = createVideo("videos/IMG_7900.MOV");
-            feet = createVideo("videos/M.ogv");
+            //feet = createVideo("videos/M.ogv");
             feet.size(300,300);
             feet.position(210,210);
             //feet = createVideo("videos/M.mkv");
@@ -21,7 +28,7 @@
             //f.loop();
          }
          function draw() {
-            if(mouseIsPressed) {
+            if(mouseIsPressed && dl) {
                //feet.speed(-feet.speed);
                //feet.speed(-1);
                //feet.playbackRate = -1.0;
