@@ -11,7 +11,7 @@
          var playing;
          var moving;
          function setup() {
-            //createCanvas(500,500);
+            createCanvas(300,100);
             //feet = createVideo("videos/IMG_7900.MOV");
             feet = createVideo("videos/M.ogv");
             feet.size(300,300);
@@ -32,8 +32,8 @@
                document.getElementsByTagName("video")[0].playbackRate = .25;//= 2.0;
                moving = !moving;
             }
-            //background(100);
-            //text("test",150,150);
+            background(255);
+            text("left... right",150,30);
             if(moving) feet.size(mouseX,mouseY);
             if(!playing) {
                //feet.loop();
