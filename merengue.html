@@ -11,10 +11,15 @@
          var playing;
          var moving;
          var dl;
+         var t;
          
-         function preload() {
+         function preload(ready) {
            feet = createVideo("videos/M.ogv");  
            dl = true;
+         }
+         
+         function ready() {
+            t.HTML = "left foot.. then right";
          }
          
          function setup() {
@@ -26,6 +31,7 @@
             //feet = createVideo("videos/M.mkv");
             playing = false;
             //f.loop();
+            t = text("left... right",150,30);
          }
          function draw() {
             if(mouseIsPressed && dl) {
@@ -40,7 +46,7 @@
                moving = !moving;
             }
             background(255);
-            text("left... right",150,30);
+            //t = text("left... right",150,30);
             //if(moving) feet.size(mouseX,mouseY);
             if(!playing) {
                //feet.loop();
