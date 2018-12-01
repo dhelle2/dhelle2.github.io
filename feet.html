@@ -15,6 +15,7 @@
             //feet = createVideo("videos/IMG_7900.MOV");
             feet = createVideo("videos/M.ogv");
             feet.size(300,300);
+            feet.position(210,210);
             //feet = createVideo("videos/M.mkv");
             playing = false;
             //f.loop();
@@ -33,7 +34,7 @@
             }
             //background(100);
             //text("test",150,150);
-            if(moving) feet.position(mouseX,mouseY);
+            if(moving) feet.size(mouseX,mouseY);
             if(!playing) {
                //feet.loop();
                playing = true;
