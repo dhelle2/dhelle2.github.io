@@ -14,6 +14,7 @@
          var t;
          
          function preload(ready) {
+           t = text("left... right",150,30);
            feet = createVideo("videos/M.ogv");  
            dl = true;
          }
@@ -31,7 +32,7 @@
             //feet = createVideo("videos/M.mkv");
             playing = false;
             //f.loop();
-            t = text("left... right",150,30);
+            //t = text("left... right",150,30);
          }
          function draw() {
             if(mouseIsPressed && dl) {
