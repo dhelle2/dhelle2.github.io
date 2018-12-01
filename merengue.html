@@ -14,13 +14,15 @@
          var t;
          
          function preload(ready) {
-           t = text("left... right",150,30);
+           //t = text("left... right",150,30);
+           t = createDiv("left... right",150,30);
            feet = createVideo("videos/M.ogv");  
            dl = true;
          }
          
          function ready() {
             t.HTML = "left foot.. then right";
+            t.position(120,50);
          }
          
          function setup() {
