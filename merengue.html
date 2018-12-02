@@ -18,12 +18,14 @@
            t = createDiv("left... right",150,30);
            feet = createVideo("videos/M.ogv");  
            dl = true;
+           setTimeout(ready,100);
          }
          
          function ready() {
             //t.HTML = "left foot.. then right";
             t.html("left foot.. then right");
             t.position(120,50);
+            alert("hello");
          }
          
          function setup() {
