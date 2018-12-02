@@ -58,13 +58,15 @@
                //feet.stop(); 
                //feet.loop();
                //document.getElementsByTagName("video")[0].playbackRate = -1.0;
-               feet.loop();
+               //feet.loop();
                document.getElementsByTagName("video")[0].playbackRate = mouseX/500;//.25;//= 2.0;
                moving = !moving;
                if(moving) {
                  ti = setInterval(ready,10000);  
+                 feet.loop();
                } else {
-                 clearInterval(ti);  
+                 clearInterval(ti);
+                 feet.stop();
                }
             }
             background(255);
