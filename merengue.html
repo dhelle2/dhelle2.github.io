@@ -18,7 +18,7 @@
            t = createDiv("left... right",150,30);
            feet = createVideo("videos/M.ogv");  
            dl = true;
-           setTimeout(ready,100);
+           //setTimeout(ready,100);
          }
          
          function ready() {
@@ -38,6 +38,7 @@
             playing = false;
             //f.loop();
             //t = text("left... right",150,30);
+            setTimeout(ready,100);
          }
          function draw() {
             if(mouseIsPressed && dl) {
