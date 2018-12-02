@@ -12,6 +12,7 @@
          var moving;
          var dl;
          var t;
+         var one = false;
          
          function preload(ready) {
            //t = text("left... right",150,30);
@@ -25,7 +26,14 @@
             //t.HTML = "left foot.. then right";
             t.html("left foot.. then right");
             t.position(120,50);
-            alert("hello");
+            //alert("hello");
+            if(one) {
+              t.html("one");
+              one = false;
+            } else {
+              t.html("two");
+              one = true;
+            }
          }
          
          function setup() {
@@ -50,7 +58,7 @@
                //feet.loop();
                //document.getElementsByTagName("video")[0].playbackRate = -1.0;
                feet.loop();
-               document.getElementsByTagName("video")[0].playbackRate = mouseX/100;//.25;//= 2.0;
+               document.getElementsByTagName("video")[0].playbackRate = mouseX/500;//.25;//= 2.0;
                moving = !moving;
             }
             background(255);
