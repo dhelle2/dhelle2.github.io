@@ -13,6 +13,7 @@
          var dl;
          var t;
          var one = false;
+         var ti;
          
          function preload(ready) {
            //t = text("left... right",150,30);
@@ -47,7 +48,7 @@
             //f.loop();
             //t = text("left... right",150,30);
             //setTimeout(ready,100);
-            setInterval(ready,10000);
+            //setInterval(ready,10000);
          }
          function draw() {
             if(mouseIsPressed && dl) {
@@ -60,6 +61,11 @@
                feet.loop();
                document.getElementsByTagName("video")[0].playbackRate = mouseX/500;//.25;//= 2.0;
                moving = !moving;
+               if(moving) {
+                 ti = setInterval(ready,10000);  
+               } else {
+                 clearInterval(ti);  
+               }
             }
             background(255);
             //t = text("left... right",150,30);
