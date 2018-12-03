@@ -15,6 +15,7 @@
          var pl;
          var counter;
          var dl = false;
+         var w = false;
          
          function preload() {
             feet = createVideo("videos/M.MP4");
@@ -24,9 +25,9 @@
          }
          
          function ready() {
-            if(!pl) {
+            if(!w) {
                feet.loop();
-               pl = true;
+               w = true;
             }
             t.html("left foot.. then right");
             t.position(120,50);
@@ -57,11 +58,12 @@
                var speed = mouseX/500;
                feet.speed(speed);
                tsp.html("speed: " + speed);
+               pl = true;
                ti = setInterval(ready,3000);  
             }
             else if(mouseIsPressed) {
                clearInterval(ti);
-               counter = 100;
+               counter = 30;
                pl = false;  
                feet.stop();
             }
