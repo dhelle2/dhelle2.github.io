@@ -14,6 +14,14 @@
          var tsp;
          var pl;
          var counter;
+         var dl = false;
+         
+         function preload() {
+            feet = createVideo("videos/M.MP4");
+            feet.size(300,300);
+            feet.position(210,210);
+            dl = true;
+         }
          
          function ready() {
             if(!pl) {
@@ -32,9 +40,6 @@
          }
          
          function setup() {
-            feet = createVideo("videos/M.MP4");
-            feet.size(300,300);
-            feet.position(210,210);
             t = createDiv("left... right",150,30);
             tsp = createDiv("speed?",150,120);
             pl = false;
@@ -42,6 +47,10 @@
         
          
          function draw() {
+            
+            if(!dl) {
+              return;  
+            }
             
             if(mouseIsPressed && !pl) {
                //document.getElementsByTagName("video")[0].playbackRate = mouseX/500;
