@@ -19,8 +19,15 @@
             feet.position(210,210);
             //feet = createVideo("videos/M.mkv");
             playing = false;
+            b = createButton("play",50,50);
+            b.mousePressed(pf);
             //f.loop();
          }
+         
+         function pf() {
+            feet.loop();   
+         }
+         
          function draw() {
             if(mouseIsPressed) {
                //feet.speed(-feet.speed);
