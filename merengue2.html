@@ -31,10 +31,10 @@
             t.html("left foot.. then right");
             t.position(120,50);
             if(one) {
-              t.html("two");
+              t.html("one");
               one = false;
             } else {
-              t.html("one");
+              t.html("two");
               one = true;
             }
          }
@@ -57,7 +57,7 @@
                var speed = mouseX/500;
                feet.speed(speed);
                tsp.html("speed: " + speed);
-               ti = setInterval(ready,10000);  
+               ti = setInterval(ready,3000);  
             }
             else if(mouseIsPressed) {
                clearInterval(ti);
