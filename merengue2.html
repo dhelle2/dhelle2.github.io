@@ -1,0 +1,115 @@
+<html>
+
+   <head>
+
+      <script src="js/p5.min.js"> </script>
+      <script src="js/p5.dom.min.js"> </script>
+
+      <script> 
+         
+         var feet;
+         var playing;
+         var moving;
+         var dl;
+         var t;
+         var one = false;
+         var ti;
+         var pl;
+         var counter;
+         
+         function preload(ready) {
+           //t = text("left... right",150,30);
+           t = createDiv("left... right",150,30);
+           feet = createVideo("videos/M.MOV");  
+           dl = true;
+           //setTimeout(ready,100);
+         }
+         
+         function ready() {
+            //t.HTML = "left foot.. then right";
+            if(!pl) {
+               feet.loop();
+               pl = true;
+            }
+            t.html("left foot.. then right");
+            t.position(120,50);
+            //alert("hello");
+            if(one) {
+              t.html("two");
+              one = false;
+            } else {
+              t.html("one");
+              one = true;
+            }
+         }
+         
+         function setup() {
+            createCanvas(300,100);
+            //feet = createVideo("videos/IMG_7900.MOV");
+            //feet = createVideo("videos/M.ogv");
+            feet.size(300,300);
+            feet.position(210,210);
+            //feet = createVideo("videos/M.mkv");
+            playing = false;
+            //f.loop();
+            //t = text("left... right",150,30);
+            //setTimeout(ready,100);
+            //setInterval(ready,10000);
+         }
+         function draw() {
+            if(mouseIsPressed && dl) {
+               //feet.speed(-feet.speed);
+               //feet.speed(-1);
+               //feet.playbackRate = -1.0;
+               //feet.stop(); 
+               //feet.loop();
+               //document.getElementsByTagName("video")[0].playbackRate = -1.0;
+               //feet.loop();
+               document.getElementsByTagName("video")[0].playbackRate = mouseX/500;//.25;//= 2.0;
+               moving = !moving;
+               if(moving) {
+                 pl = false;
+                 //counter--;
+                 //if(counter < 0) counter = 0;
+                 t.html("getting ready to test..."); // + counter);
+                 ti = setInterval(ready,10000);  
+                 //feet.loop();
+               } else {
+                 counter = 100;
+                 clearInterval(ti);
+                 feet.stop();
+               }
+            }
+            
+            
+            if(pl && counter > 0) {
+              counter--;
+              //if(counter < 0 ) counter = 0;
+              t.html("getting ready to test... " + counter);
+            }
+            background(255);
+            //t = text("left... right",150,30);
+            //if(moving) feet.size(mouseX,mouseY);
+            if(!playing) {
+               //feet.loop();
+               playing = true;
+               //playing = true;
+            }
+         }  
+         
+         function mousePressed() {
+            moving = !moving;
+            playing = !playing;
+            feet.speed = -1;
+            feet.stop();
+            //feet.loop();
+         }
+      </script>
+
+   </head>
+ 
+   <body>
+      
+   </body>
+
+</html>
