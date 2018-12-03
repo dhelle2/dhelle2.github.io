@@ -69,9 +69,9 @@
                moving = !moving;
                if(moving) {
                  pl = false;
-                 counter--;
-                 if(counter < 0) counter = 0;
-                 t.html("getting ready to test..." + counter);
+                 //counter--;
+                 //if(counter < 0) counter = 0;
+                 t.html("getting ready to test..."); // + counter);
                  ti = setInterval(ready,10000);  
                  //feet.loop();
                } else {
@@ -79,6 +79,14 @@
                  clearInterval(ti);
                  feet.stop();
                }
+            }
+            
+            
+            if(moving) {
+              counter--;
+              if(counter < 0 ) counter = 0;
+              t.html("getting ready to test... " + counter);
+            }
             }
             background(255);
             //t = text("left... right",150,30);
