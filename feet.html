@@ -10,6 +10,8 @@
          var feet;
          var playing;
          var moving;
+         var bf;
+         
          function setup() {
             //createCanvas(500,500);
             //feet = createVideo("videos/IMG_7900.MOV");
@@ -26,6 +28,7 @@
          }
          
          function pf() {
+            moving = false;
             feet.loop();   
          }
          
@@ -51,13 +54,13 @@
             }
          }  
          
-         function mousePressed() {
+        /* function mousePressed() {
             moving = !moving;
             playing = !playing;
             feet.speed = -1;
             feet.stop();
             //feet.loop();
-         }
+         }*/
       </script>
 
    </head>
