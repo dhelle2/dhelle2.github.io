@@ -75,16 +75,16 @@
                  ti = setInterval(ready,10000);  
                  //feet.loop();
                } else {
-                 counter = 10000;
+                 counter = 100;
                  clearInterval(ti);
                  feet.stop();
                }
             }
             
             
-            if(moving) {
+            if(moving && counter > 0) {
               counter--;
-              if(counter < 0 ) counter = 0;
+              //if(counter < 0 ) counter = 0;
               t.html("getting ready to test... " + counter);
             }
             background(255);
