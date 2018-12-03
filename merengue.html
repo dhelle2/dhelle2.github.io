@@ -15,6 +15,7 @@
          var one = false;
          var ti;
          var pl;
+         var counter;
          
          function preload(ready) {
            //t = text("left... right",150,30);
@@ -68,10 +69,13 @@
                moving = !moving;
                if(moving) {
                  pl = false;
-                 t.html("getting ready to test...");
+                 counter--;
+                 if(counter < 0) counter = 0;
+                 t.html("getting ready to test..." + counter);
                  ti = setInterval(ready,10000);  
                  //feet.loop();
                } else {
+                 counter = 10000;
                  clearInterval(ti);
                  feet.stop();
                }
