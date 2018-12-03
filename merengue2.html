@@ -50,7 +50,7 @@
                tsp.html("speed: " + speed);
                ti = setInterval(ready,10000);  
             }
-            else {
+            else if(mouseIfPressed) {
                clearInterval(ti);
                counter = 100;
                pl = false;  
